@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>super easy validation</h1>
+        <form>
+          <label class="control-label">
+            Please provide your first name
+            <input type="text" id="firstName" name="first_name" class="form-control">
+          </label>
+
+          <label>
+            Please provide your last name
+            <input type="text" id="lastName" name="last_name" class="form-control">
+          </label>
+          <select name="picker" class="form-control">
+            <option value="">Select One</option>
+            <option value="bob">Bob</option>
+            <option value="jane">Jane</option>
+          </select>
+          
+          <button class="btn btn-success" disabled type="submit" id="submitBtn">Go</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
