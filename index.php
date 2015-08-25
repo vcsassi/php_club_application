@@ -6,7 +6,7 @@ $message = '';
 $firstname = $lastname = $email = $phone = $dob = $favoritebrand = $username = $password = "";
 if(isset($_POST['george'])){
 	$submitted = true;
-	echo "checking errors";
+	// echo "checking errors";
 	//check to see if first name exists
 	if(empty($_POST['first_name'])){
 		$errors['first_name']="First name is required";
@@ -59,8 +59,8 @@ if(isset($_POST['george'])){
   //if valid then redirect
 	//changed here too -- added the errors thing and then run writeEntry function if there are not errors
 if($submitted && empty($errors)){
-   /*header('Location: http://www.google.com');
-   exit();*/
+   header('Location: confirmation.php');
+   // exit();
    writeEntry();
  }
 }
@@ -115,15 +115,6 @@ $file = file_get_contents($raw_file);
 $details = str_getcsv($file, "\n");
 array_splice($details, 0, 1);
 // print_r($_POST);
-
-if (isset($_POST['create_account']))
-    {   
-    ?>
-<script type="text/javascript">
-window.location = "confirmation.php";
-</script>      
-    <?php
-    }
 
 ?>
 <!DOCTYPE html>
